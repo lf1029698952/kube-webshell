@@ -1,2 +1,2 @@
-# sahaba-exec
-Sahaba Kubernetes WebShell Terminal
+# Kube-WebShell
+Kubernetes WebShell Terminal By Sahaba Team@zbj.com
