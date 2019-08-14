@@ -1,0 +1,39 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  #对应项目名称
+  name: kube-webshell
+  namespace: sahaba
+spec:
+  revisionHistoryLimit: 5
+  replicas: 1
+ #滚动更新策略
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        #对应项目名称
+        kube-webshell: "true"
+    spec:
+      containers:
+      - name: app
+        image: k8s-webshell:0.1
+        imagePullPolicy: "Always"
+        resources:
+          requests:
+            cpu: "1"
+            memory: "512Mi"
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+        volumeMounts:
+        - name: k8s-webshell-conf
+          mountPath: "/opt/kube/conf"
+          readOnly: true
+      volumes:
+      - name: kube-webshell-conf
+        secret:
+          secretName: kube-webshell-conf
