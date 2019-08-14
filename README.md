@@ -1,5 +1,5 @@
 # Kube-WebShell
-Kubernetes WebShell Terminal By Sahaba Team@zbj.com
+Kubernetes WebShell Terminal By Sahaba Team
 
 参考kube-dashboard提取出来的容器网页版控制台，通过web浏览器连接k8s容器。  
 
@@ -16,6 +16,8 @@ Kubernetes WebShell Terminal By Sahaba Team@zbj.com
 - 多集群支持
 - web终端实现，自带心跳保活
 - 自适应浏览器窗口并动态调整tty大小
+- 支持用户权限控制 [TODO] 
+- 支持用户操作日志审计 [TODO] 
 
 
 ## 使用:
