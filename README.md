@@ -1,6 +1,21 @@
 # Kube-WebShell
 Kubernetes WebShell Terminal By Sahaba Team
 
+## 云原生应用开发大赛
+
+ 本项目已参加 [阿里云原生应用开发大赛](https://developer.aliyun.com/hub/detail?spm=a2c6h.12873679.0.0.61811107Si0gaZ&name=kube-webshell&version=0.1.0)  
+请各位大佬帮忙点个赞，谢谢。
+![点赞](docs/images/apphub-star.png)
+
+本项目已提交至阿里云原生应用仓库
+使用helm apphub快速安装使用：
+
+```bash
+helm repo add apphub https://apphub.aliyuncs.com/
+helm install apphub/kube-webshell --version 0.1.0
+```
+
+
 参考kube-dashboard提取出来的容器网页版控制台，通过web浏览器连接k8s容器。  
 
 基于xterm.js和sockjs实现，简单轻量。  
