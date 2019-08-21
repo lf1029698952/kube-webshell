@@ -145,6 +145,8 @@ func (self TerminalSockjs) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	pod := r.FormValue("pod")
 	container := r.FormValue("container")
 	Sockjshandler := func(session sockjs.Session) {
+		defer session.Close(0, "exit close 0")
+
 		t := &TerminalSockjs{session, make(chan *remotecommand.TerminalSize),
 			context, namespace, pod, container}
 		if err := Handler(t, "/bin/bash"); err != nil {
