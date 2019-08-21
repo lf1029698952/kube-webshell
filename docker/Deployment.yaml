@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   #对应项目名称
   name: kube-webshell
-  namespace: sahaba
+  namespace: kube-system
 spec:
   revisionHistoryLimit: 5
   replicas: 1
@@ -20,12 +20,12 @@ spec:
     spec:
       containers:
       - name: app
-        image: k8s-webshell:0.1
+        image: k8s-webshell:latest
         imagePullPolicy: "Always"
         resources:
           requests:
-            cpu: "1"
-            memory: "512Mi"
+            cpu: "100m"
+            memory: "128Mi"
           limits:
             cpu: "1"
             memory: "512Mi"

@@ -18,8 +18,8 @@ helm install apphub/kube-webshell --version 0.1.0
 
 参考kube-dashboard提取出来的容器网页版控制台，通过web浏览器连接k8s容器。  
 
-基于xterm.js和sockjs实现，简单轻量。  
-需要提供kubeconfig文件，使用时传递以下参数：  
+基于xterm.js和sockjs实现，简单轻量，可与任何Kubernetes集群集成，根据自己的需求定制。  
+需要提供kubeconfig文件，通过uri传参即可，使用时传递以下参数：  
 
 - context
 - namespace
