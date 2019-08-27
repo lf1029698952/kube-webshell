@@ -1,5 +1,5 @@
 # Kube-WebShell
-Kubernetes WebShell Terminal By Sahaba Team
+Kubernetes WebShell Terminal By Lifeng
 
 ## 云原生应用开发大赛
 
@@ -15,7 +15,7 @@ helm repo add apphub https://apphub.aliyuncs.com/
 helm install apphub/kube-webshell --version 0.1.0
 ```
 
-
+本项目在[web-terminal-in-go](https://github.com/du2016/web-terminal-in-go)的基础上进行了优化改造。  
 参考kube-dashboard提取出来的容器网页版控制台，通过web浏览器连接k8s容器。  
 
 基于xterm.js和sockjs实现，简单轻量，可与任何Kubernetes集群集成，根据自己的需求定制。  
