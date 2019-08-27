@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="kube webshell by lifenga@zbj.com"
+LABEL maintainer="kube webshell by LiFeng"
 
 RUN apk add -U tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
