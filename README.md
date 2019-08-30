@@ -12,7 +12,16 @@ Kubernetes WebShell Terminal By Lifeng
 
 ```bash
 helm repo add apphub https://apphub.aliyuncs.com/
-helm install apphub/kube-webshell --version 0.1.0
+helm install apphub/kube-webshell
+```
+**注意:使用apphub默认安装后，没有kubeconfig文件所以无法连接任何集群，请自行替换secret中的config文件，或使用以下方法安装**
+```bash
+git clone https://github.com/lf1029698952/kube-webshell.git
+cd kube-webshell/helm-chart
+```
+将目标集群的kubeconfig文件内容替换至kubeconfig.toml文件下，支持多集群contexts配置，然后执行：
+```
+helm install kube-webshell ./
 ```
 
 本项目在[web-terminal-in-go](https://github.com/du2016/web-terminal-in-go)的基础上进行了优化改造。  
