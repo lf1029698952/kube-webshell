@@ -30,8 +30,8 @@ helm install kube-webshell ./
 基于xterm.js和sockjs实现，简单轻量，可与任何Kubernetes集群集成，根据自己的需求定制。  
 需要提供kubeconfig文件，通过uri传参即可，使用时传递以下参数：  
 
-- context
-- namespace
+- context k8s中/root/.kube/config 文件中的current-context
+- namespace  
 - podname
 - containername
 
