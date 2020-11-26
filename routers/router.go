@@ -14,7 +14,7 @@ package routers
 
 import (
 	"github.com/astaxie/beego"
-	"github.com/du2016/web-terminal-in-go/k8s-webshell/controllers"
+	"kube-webshell/controllers"
 )
 
 func init() {

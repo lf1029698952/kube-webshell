@@ -2,9 +2,11 @@ package main
 
 import (
 	"github.com/astaxie/beego"
-	_ "github.com/du2016/web-terminal-in-go/k8s-webshell/routers"
+	"kube-webshell/controllers"
+	_ "kube-webshell/routers"
 )
 
 func main() {
+	beego.InsertFilter("/terminal/*", beego.BeforeExec, controllers.FilterToken)
 	beego.Run()
 }
