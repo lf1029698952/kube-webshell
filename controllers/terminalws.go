@@ -46,7 +46,12 @@ func (self TerminalSockjs) Read(p []byte) (int, error) {
 }
 
 func (self TerminalSockjs) Write(p []byte) (int, error) {
-	err := self.conn.Send(string(p))
+	var err error
+	if strings.Contains(string(p), "OCI runtime exec failed: exec failed: container_linux.go:344") {
+		beego.Info("/bin/bash not support")
+	} else {
+		err = self.conn.Send(string(p))
+	}
 	return len(p), err
 }
 
