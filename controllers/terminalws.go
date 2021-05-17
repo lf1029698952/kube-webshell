@@ -182,7 +182,7 @@ func FilterToken(ctx *context.Context) {
 			logs.Warning("not contain token")
 			http.Error(ctx.ResponseWriter, "auth failed", http.StatusUnauthorized)
 		}
-		url := "http://" + beego.AppConfig.String("gateway-address") + ":" + beego.AppConfig.String("gateway-port") + "/oauth/check_token?token=" + token
+		url := "http://" + beego.AppConfig.String("gateway-address") + ":" + beego.AppConfig.String("gateway-port") + "/api/oauth/validate-token?token=" + token
 		resp, err := http.Get(url)
 		if err != nil {
 			logs.Error("can not get connection to gateway")
