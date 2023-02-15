@@ -13,5 +13,6 @@ func (self *TerminalController) Get() {
 	self.Data["namespace"] = self.GetString("namespace")
 	self.Data["pod"] = self.GetString("pod")
 	self.Data["container"] = self.GetString("container")
+	self.Data["token"] = self.GetString("token")
 	self.TplName = "terminal.html"
 }

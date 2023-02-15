@@ -161,6 +161,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: calc(100% - 18px);
+    overflow-x: auto;
 }
 
 .terminal .xterm-rows > div {
